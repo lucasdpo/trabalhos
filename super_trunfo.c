@@ -12,6 +12,8 @@ int main(){
     float area1;
     float pib1;
     int turis1;
+    float dens1;
+    float ppc1;
 
 /*declaracao das variaveis da carta 2*/
     char estado2[2];
@@ -21,6 +23,8 @@ int main(){
     float area2;
     float pib2;
     int turis2;
+    float dens2;
+    float ppc2;
 
 /*"tela titulo" ja com o pedido para o usuario inserir, um a um, os dados das duas cartas*/
     printf(" \n");
@@ -79,6 +83,13 @@ int main(){
     printf("Digite a quantidade de pontos turisticos da segunda carta: ");
     scanf("%d", &turis2);
 
+/*caculo dos indicadores*/
+    dens1 = (float) popul1 / area1;
+    ppc1 = (pib1 * 1000000000 ) / (float) popul1;
+
+    dens2 = (float) popul2 / area2;
+    ppc2 = (pib2 * 1000000000 ) / (float) popul2;
+
 /*exibicao dos dados*/
     printf(" \n");
     printf("---Carta 1---\n");
@@ -90,6 +101,8 @@ int main(){
     printf("Area: %.2fkm² \n", area1);  //%.2f limita a exibicao a duas casas decimais
     printf("PIB: R$%.2f bilhoes \n", pib1);
     printf("Numero de pontos turisticos: %d \n", turis1);
+    printf("Densidade Populacional: %.2f hab/km² \n", dens1);
+    printf("PIB per capita: %.2f reais \n", ppc1);
     printf(" \n");
 
     printf(" \n");
@@ -102,6 +115,8 @@ int main(){
     printf("Area: %fkm² \n", area2);
     printf("PIB: R$%f bilhoes \n", pib2);
     printf("Numero de pontos turisticos: %d \n", turis2);
+    printf("Densidade Populacional: %.2f hab/km² \n", dens2);
+    printf("PIB per capita: %.2f reais \n", ppc2);
     printf(" \n");
 
     return 0;
